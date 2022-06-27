@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-const tasks = ['Angola', 'Cabo-Verde', 'Nigeria'];
 
 class List extends Component
 {
   render()
   {
     return (<ol>
-        {tasks.map((task, index) => <li key={index}> {task} </li>)}
+        {this.props.tasks.map((task, index) => <li key={index}> {task} </li>)}
       </ol>)
   }
 }
@@ -27,7 +26,7 @@ class Main extends Component
   {
     return <div>
       <Title/>
-      <List/>
+      <List tasks = {['Angola', 'Cabo-Verde', 'Nigeria']}/>
     </div>
   }
 }
