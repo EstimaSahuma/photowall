@@ -5,7 +5,7 @@ class Title extends Component
 {
   render()
   {
-    return <h1> Task List</h1>
+    return <h1>{ this.props.title }</h1>
   }
 }
 
